@@ -977,14 +977,14 @@
         body += 'Email: ' + email + '\n';
         if (phone) body += 'Phone: ' + phone + '\n';
         body += '\n' + message;
-        var mailto = 'mailto:hello@liveyounger.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        var mailto = 'mailto:peterlangelaar@yahoo.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         window.location.href = mailto;
         msg.className = 'form-msg show ok';
-        msg.textContent = '\u2713 Your email app should have opened. If not, send to hello@liveyounger.com';
+        msg.textContent = '\u2713 Your email app should have opened. If not, send to peterlangelaar@yahoo.com directly.';
         document.getElementById('contact-form').reset();
       } catch (err) {
         msg.className = 'form-msg show err';
-        msg.textContent = '\u2715 Could not open email. Please email hello@liveyounger.com directly.';
+        msg.textContent = '\u2715 Could not open email. Please email peterlangelaar@yahoo.com directly.';
       }
       btn.disabled = false;
       btn.textContent = 'Send Message';
