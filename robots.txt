@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://mrchocobean.github.io/liveyounger/sitemap.xml
+Sitemap: https://healthrevolutionsnow.com/sitemap.xml
 
 # Let Googlebot fetch all resources
 User-agent: Googlebot
