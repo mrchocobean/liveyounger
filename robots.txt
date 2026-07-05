@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /api/
+
 Sitemap: https://mrchocobean.github.io/liveyounger/sitemap.xml
+
+# Let Googlebot fetch all resources
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Let Bingbot fetch all resources
+User-agent: Bingbot
+Allow: /

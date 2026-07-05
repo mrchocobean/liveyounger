@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mrchocobean.github.io/liveyounger/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mrchocobean.github.io/liveyounger/images/x39.jpg</image:loc>
+      <image:title>LifeWave X39 Stem Cell Activation Patch</image:title>
+      <image:caption>Patented phototherapy patch that activates stem cells for anti-aging and healing</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrchocobean.github.io/liveyounger/images/x49.jpg</image:loc>
+      <image:title>LifeWave X49 Fitness Patch</image:title>
+      <image:caption>Supports muscle, bone, and cardiovascular health</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrchocobean.github.io/liveyounger/images/icewave.jpg</image:loc>
+      <image:title>LifeWave IceWave Pain Relief Patch</image:title>
+      <image:caption>Drug-free pain relief phototherapy patch</image:caption>
+    </image:image>
   </url>
 </urlset>
