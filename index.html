@@ -957,46 +957,34 @@
   </div>
 
   <script>
-    // Track page views
-    (function() {
-      fetch('/api/analytics/view', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ path: window.location.pathname, referrer: document.referrer })
-      }).catch(function(){});
-    })();
+    // Track page views - disabled on static hosting (GitHub Pages)
+    // (function() { fetch('/api/analytics/view'... })();
 
-    // Contact form
-    async function submitContact(e) {
+    // Contact form - mailto fallback for static hosting (GitHub Pages)
+    function submitContact(e) {
       e.preventDefault();
       var btn = document.getElementById('contact-btn');
       var msg = document.getElementById('contact-msg');
       btn.disabled = true;
-      btn.textContent = 'Sending...';
+      btn.textContent = 'Opening email...';
       try {
-        var res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            name: document.getElementById('c-name').value,
-            email: document.getElementById('c-email').value,
-            phone: document.getElementById('c-phone').value,
-            subject: document.getElementById('c-subject').value,
-            message: document.getElementById('c-message').value
-          })
-        });
-        var data = await res.json();
-        if (data.success) {
-          msg.className = 'form-msg show ok';
-          msg.textContent = '\u2713 Message sent! We\'ll get back to you within 24 hours.';
-          document.getElementById('contact-form').reset();
-        } else {
-          msg.className = 'form-msg show err';
-          msg.textContent = '\u2715 ' + (data.error || 'Something went wrong');
-        }
+        var name = document.getElementById('c-name').value || '';
+        var email = document.getElementById('c-email').value || '';
+        var phone = document.getElementById('c-phone').value || '';
+        var subject = document.getElementById('c-subject').value || 'LifeWave Inquiry';
+        var message = document.getElementById('c-message').value || '';
+        var body = 'Name: ' + name + '\n';
+        body += 'Email: ' + email + '\n';
+        if (phone) body += 'Phone: ' + phone + '\n';
+        body += '\n' + message;
+        var mailto = 'mailto:hello@liveyounger.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+        msg.className = 'form-msg show ok';
+        msg.textContent = '\u2713 Your email app should have opened. If not, send to hello@liveyounger.com';
+        document.getElementById('contact-form').reset();
       } catch (err) {
         msg.className = 'form-msg show err';
-        msg.textContent = '\u2715 Network error. Please try again.';
+        msg.textContent = '\u2715 Could not open email. Please email hello@liveyounger.com directly.';
       }
       btn.disabled = false;
       btn.textContent = 'Send Message';
