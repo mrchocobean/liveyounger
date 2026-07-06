@@ -208,6 +208,7 @@
 
     /* Contact */
     .contact-section{background:var(--bg);content-visibility:auto;contain-intrinsic-size:auto 500px}
+    #whatsapp-cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(37,211,102,.4)}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
     .form-group{margin-bottom:16px}
     .form-group label{display:block;font-size:.85rem;font-weight:500;margin-bottom:6px;color:var(--dark)}
@@ -943,23 +944,25 @@
       e.preventDefault();
       var btn = document.getElementById('contact-btn');
       var msg = document.getElementById('contact-msg');
+      var form = document.getElementById('contact-form');
+      // Batch all DOM reads first, then writes — avoids layout thrashing
+      var name = document.getElementById('c-name').value || '';
+      var email = document.getElementById('c-email').value || '';
+      var phone = document.getElementById('c-phone').value || '';
+      var subject = document.getElementById('c-subject').value || 'LifeWave Inquiry';
+      var message = document.getElementById('c-message').value || '';
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n';
+      if (phone) body += 'Phone: ' + phone + '\n';
+      body += '\n' + message;
+      // Batch all DOM writes after reads
       btn.disabled = true;
       btn.textContent = 'Opening email...';
       try {
-        var name = document.getElementById('c-name').value || '';
-        var email = document.getElementById('c-email').value || '';
-        var phone = document.getElementById('c-phone').value || '';
-        var subject = document.getElementById('c-subject').value || 'LifeWave Inquiry';
-        var message = document.getElementById('c-message').value || '';
-        var body = 'Name: ' + name + '\n';
-        body += 'Email: ' + email + '\n';
-        if (phone) body += 'Phone: ' + phone + '\n';
-        body += '\n' + message;
         var mailto = 'mailto:peterlangelaar@yahoo.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         window.location.href = mailto;
         msg.className = 'form-msg show ok';
         msg.textContent = '\u2713 Your email app should have opened. If not, send to peterlangelaar@yahoo.com directly.';
-        document.getElementById('contact-form').reset();
+        form.reset();
       } catch (err) {
         msg.className = 'form-msg show err';
         msg.textContent = '\u2715 Could not open email. Please email peterlangelaar@yahoo.com directly.';
@@ -992,29 +995,29 @@
       } catch { alert('Login failed'); }
     }
 
+    // Critical interaction handlers — attach immediately for good INP
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var href = a.getAttribute('href');
+        if (href === '#') return;
+        var t = document.querySelector(href);
+        if (t) {
+          e.preventDefault();
+          t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    var hamburger = document.getElementById('hamburger-btn');
+    if (hamburger) hamburger.addEventListener('click', function() {
+      document.getElementById('mobile').classList.toggle('show');
+    });
+    document.querySelectorAll('[data-close-mobile]').forEach(function(a) {
+      a.addEventListener('click', function() { this.parentElement.classList.remove('show'); });
+    });
+
     // Defer non-critical JS to avoid long main-thread tasks
     function deferNonCritical() {
-      // Smooth scroll offset for fixed nav (uses scroll-margin-top CSS, avoids forced reflow)
-      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-        a.addEventListener('click', function(e) {
-          var href = a.getAttribute('href');
-          if (href === '#') return;
-          var t = document.querySelector(href);
-          if (t) {
-            e.preventDefault();
-            t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-
-      // Event listeners (replaced inline handlers for CSP compliance)
-      var hamburger = document.getElementById('hamburger-btn');
-      if (hamburger) hamburger.addEventListener('click', function() {
-        document.getElementById('mobile').classList.toggle('show');
-      });
-      document.querySelectorAll('[data-close-mobile]').forEach(function(a) {
-        a.addEventListener('click', function() { this.parentElement.classList.remove('show'); });
-      });
       var adminForm = document.getElementById('admin-form');
       if (adminForm) adminForm.addEventListener('submit', doAdminLogin);
       var adminCancel = document.getElementById('admin-cancel');
@@ -1022,16 +1025,7 @@
         document.getElementById('admin-modal').classList.remove('show');
       });
       var waCta = document.getElementById('whatsapp-cta');
-      if (waCta) {
-        waCta.addEventListener('mouseover', function() {
-          this.style.transform='translateY(-3px)';
-          this.style.boxShadow='0 12px 40px rgba(37,211,102,.4)';
-        });
-        waCta.addEventListener('mouseout', function() {
-          this.style.transform='';
-          this.style.boxShadow='0 8px 32px rgba(37,211,102,.3)';
-        });
-      }
+      // Hover effect moved to CSS :hover — no JS style manipulation needed
 
       // Lazy load iframes (Vimeo + Bitchute) — only load when visible
       var lazyIframes = document.querySelectorAll('iframe[data-src]');
