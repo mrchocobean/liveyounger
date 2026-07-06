@@ -1,0 +1,46 @@
+# HealthRevolutionNow
+
+> LifeWave X39 phototherapy patches — stem cell activation, anti-aging, and wellness. Backed by 80+ clinical studies, 90+ patents, and 4M+ users worldwide. Drug-free, non-invasive, clinically proven.
+
+## About
+
+HealthRevolutionNow.com is an informational and product website for LifeWave X39 phototherapy patches. The site educates visitors about stem cell activation technology, phototherapy science, and LifeWave product offerings. It features doctor testimonials, clinical research, athlete endorsements, and product information for X39, X49, IceWave, Silent Nights, Y-Age Glutathione, and Y-Age Aeon patches.
+
+## Key Pages & Sections
+
+- [Home](https://healthrevolutionsnow.com/) — Main landing page with hero, product overview, and science
+- [Products](https://healthrevolutionsnow.com/#products) — LifeWave patch product lineup
+- [Science](https://healthrevolutionsnow.com/#science) — Clinical research and stem cell activation data
+- [Videos](https://healthrevolutionsnow.com/#videos) — Doctor testimonials and video evidence
+- [X2O](https://healthrevolutionsnow.com/#x2o) — LifeWave X2O product information
+- [Why LifeWave](https://healthrevolutionsnow.com/#why) — Company overview and growth
+- [Partner](https://healthrevolutionsnow.com/#partner) — Brand partner opportunity
+- [Contact](https://healthrevolutionsnow.com/#contact) — Contact information and WhatsApp group
+
+## Products
+
+- **LifeWave X39** — Stem cell activation patch using phototherapy technology
+- **LifeWave X49** — Energy and performance enhancement patch
+- **IceWave** — Pain relief patch
+- **Silent Nights** — Sleep improvement patch
+- **Y-Age Glutathione** — Antioxidant and detox support patch
+- **Y-Age Aeon** — Stress relief and anti-inflammatory patch
+- **LifeWave X2O** — Hydration and mineral supplement
+
+## Store
+
+Purchase products at: https://lifewave.com/revolutionisnow/store/products
+
+## Contact
+
+- Website: https://healthrevolutionsnow.com/
+- WhatsApp Group: See contact section on website
+- Brand Partner: LifeWave distributor ID: Revolutionisnow
+
+## Technology
+
+- Static HTML/CSS/JS site hosted on GitHub Pages
+- No external JavaScript dependencies
+- WebP image optimization with fallbacks
+- Mobile-responsive design
+- SEO-optimized with structured data (JSON-LD)
