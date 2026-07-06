@@ -44,12 +44,9 @@
   <meta name="geo.region" content="WORLD">
   <meta name="geo.placename" content="Global">
 
-  <!-- Performance: only preconnect to critical font origins (LCP path) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Performance: self-hosted font (eliminates Google Fonts critical chain + cache issues) -->
+  <link rel="preload" as="font" href="/fonts/inter-latin.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/images/x39.webp" fetchpriority="high" type="image/webp">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-size='55' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'%3ELY%3C/text%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-size='55' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'%3ELY%3C/text%3E%3C/svg%3E">
 
@@ -63,11 +60,11 @@
 
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--bg:#fafafa;--white:#fff;--dark:#111;--text:#333;--muted:#777;--accent:#2563eb;--accent2:#059669;--border:rgba(0,0,0,.06);--radius:12px;--max:1100px}
+    :root{--bg:#fafafa;--white:#fff;--dark:#111;--text:#333;--muted:#666;--accent:#2563eb;--accent2:#059669;--border:rgba(0,0,0,.06);--radius:12px;--max:1100px}
     html{scroll-behavior:smooth;font-size:16px}
     body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
     /* Prevent FOIT/FOUT layout shift */
-    @font-face{font-family:'Inter';src:local('Inter');font-display:swap;size-adjust:100%}
+    @font-face{font-family:'Inter';src:url('/fonts/inter-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
     img{max-width:100%;height:auto;display:block}
     picture{display:block}
     picture img{width:100%;height:auto}
@@ -139,7 +136,7 @@
     /* Science Section */
     .science-section{background:linear-gradient(135deg,#0c4a6e 0%,#164e63 50%,#0f172a 100%);color:#fff}
     .science-section h2{color:#fff}
-    .science-section p{color:rgba(255,255,255,.7)}
+    .science-section p{color:rgba(255,255,255,.8)}
     .science-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .science-img{border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.05);position:relative;width:100%;aspect-ratio:1080/675}
     .science-img img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
@@ -179,13 +176,13 @@
     /* X2O Section */
     .x2o-section{background:linear-gradient(135deg,#0c4a6e 0%,#164e63 50%,#134e4a 100%);color:#fff;content-visibility:auto;contain-intrinsic-size:auto 800px}
     .x2o-section h2{color:#fff}
-    .x2o-section p{color:rgba(255,255,255,.7)}
+    .x2o-section p{color:rgba(255,255,255,.8)}
     .x2o-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .x2o-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:rgba(255,255,255,.05)}
     .x2o-img img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
     .x2o-features{list-style:none;margin-top:28px}
     .x2o-features li{padding:10px 0;display:flex;align-items:flex-start;gap:12px;font-size:.95rem;color:rgba(255,255,255,.85)}
-    .x2o-features li::before{content:'';width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);flex-shrink:0;margin-top:8px}
+    .x2o-features li::before{content:'';width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);flex-shrink:0;margin-top:8px}
 
     /* Why Section */
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -228,16 +225,16 @@
     .contact-detail .icon{width:40px;height:40px;border-radius:10px;background:rgba(37,99,235,.06);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
 
     /* Footer */
-    footer{background:var(--dark);color:rgba(255,255,255,.5);padding:48px 0 24px}
+    footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 24px}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
     .footer-brand .logo{color:#fff;margin-bottom:8px}
-    .footer-brand p{font-size:.88rem;color:rgba(255,255,255,.4)}
+    .footer-brand p{font-size:.88rem;color:rgba(255,255,255,.65)}
     footer h4{color:#fff;font-size:.88rem;font-weight:600;margin-bottom:12px}
     footer ul{list-style:none}
     footer ul li{margin-bottom:8px}
-    footer ul a{font-size:.85rem;color:rgba(255,255,255,.45);transition:color .2s}
+    footer ul a{font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s}
     footer ul a:hover{color:rgba(255,255,255,.8)}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.3)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.55)}
 
     /* Admin Login Modal */
     .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
@@ -342,7 +339,7 @@
           <picture><source srcset="images/stem-cell-decline.webp" type="image/webp"><img width="1080" height="675" loading="lazy" fetchpriority="high" alt="Stem cell decline chart showing 50% decrease by age 30 and further decline by age 60" src="images/stem-cell-decline.png"></picture>
         </div>
         <div>
-          <div class="section-label" style="color:rgba(255,255,255,.5)">The Science</div>
+          <div class="section-label" style="color:rgba(255,255,255,.7)">The Science</div>
           <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:16px">Why 10 Years of Stem Cell Research?</h2>
           <p style="font-size:1.05rem;margin-bottom:8px">The older you get, the <strong style="color:#fff">FASTER you age</strong> and the <strong style="color:#fff">SLOWER you heal</strong> — due to a natural decline in your body's #1 repair system: <strong style="color:#fff">stem cells</strong>.</p>
           <p style="margin-bottom:24px">By age 30, stem cells have decreased by about 50%. By age 60, only a small percentage are still active. Your doctor probably never told you about this.</p>
@@ -498,7 +495,7 @@
             </a>
           </div>
           <div class="product-card-body">
-            <span class="product-tag style="background:rgba(147,51,234,.08);color:#7c3aed"" style="style="background:rgba(147,51,234,.08);color:#7c3aed"">Sleep</span>
+            <span class="product-tag" style="background:rgba(147,51,234,.08);color:#7c3aed">Sleep</span>
             <h3>Silent Nights Patch</h3>
             <p>Improves sleep quality without drugs. Fall asleep faster and wake up refreshed.</p>
             <div class="price-comparison">
@@ -519,7 +516,7 @@
             </a>
           </div>
           <div class="product-card-body">
-            <span class="product-tag style="background:rgba(234,179,8,.08);color:#b45309"" style="style="background:rgba(234,179,8,.08);color:#b45309"">Immunity</span>
+            <span class="product-tag" style="background:rgba(234,179,8,.08);color:#b45309">Immunity</span>
             <h3>Y-Age Glutathione</h3>
             <p>Boosts the body's master antioxidant for detox, immune support, and cellular protection.</p>
             <div class="price-comparison">
@@ -540,7 +537,7 @@
             </a>
           </div>
           <div class="product-card-body">
-            <span class="product-tag style="background:rgba(244,63,94,.08);color:#e11d48"" style="style="background:rgba(244,63,94,.08);color:#e11d48"">Anti-Aging</span>
+            <span class="product-tag" style="background:rgba(244,63,94,.08);color:#e11d48">Anti-Aging</span>
             <h3>Y-Age Aeon</h3>
             <p>Stress relief and anti-aging. Reduces inflammation and promotes calm vitality.</p>
             <div class="price-comparison">
@@ -662,7 +659,7 @@
   <section style="background:linear-gradient(135deg,#0c4a6e 0%,#164e63 50%,#0f172a 100%);color:#fff;text-align:center">
     <div class="container">
       <div class="section-header">
-        <div class="section-label" style="color:rgba(255,255,255,.5)">Opportunity</div>
+        <div class="section-label" style="color:rgba(255,255,255,.7)">Opportunity</div>
         <h2 style="color:#fff">Live Younger... Help Others... Get Paid for Sharing!</h2>
         <p style="color:rgba(255,255,255,.7)">Satisfaction of being rewarded for making a difference in people's lives, health &amp; wealth!</p>
       </div>
@@ -685,7 +682,7 @@
         </div>
         </div>
         <div>
-          <div class="section-label" style="color:rgba(255,255,255,.5)">Water Technology</div>
+          <div class="section-label" style="color:rgba(255,255,255,.7)">Water Technology</div>
           <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:16px">LifeWave X2O<br>Water System</h2>
           <p style="font-size:1.05rem;margin-bottom:8px">The LifeWave X2O water system transforms your drinking water into optimal hydration. Engineered with advanced water technology, X2O enhances water's natural structure for superior cellular absorption.</p>
           <p style="font-size:.95rem;margin-bottom:24px">When your body is properly hydrated at the cellular level, every system works better — energy, cognition, recovery, and overall wellness.</p>
@@ -885,7 +882,7 @@
           <p>Empowering millions to live healthier, younger lives through phototherapy and water technology. LifeWave — a 21-year-old U.S. Health Sciences Research &amp; Development Company.</p>
         </div>
         <div>
-          <h4>Products</h4>
+          <h3>Products</h3>
           <ul>
             <li><a href="#products">X39 Patch</a></li>
             <li><a href="#products">X49 Patch</a></li>
@@ -895,7 +892,7 @@
           </ul>
         </div>
         <div>
-          <h4>Programs</h4>
+          <h3>Programs</h3>
           <ul>
             <li><a href="https://lifewave.com/revolutionisnow/store/products" target="_blank" rel="noopener">Preferred Customer</a></li>
             <li><a href="#partner">Brand Partner</a></li>
@@ -904,7 +901,7 @@
           </ul>
         </div>
         <div>
-          <h4>Connect</h4>
+          <h3>Connect</h3>
           <ul>
             <li><a href="#contact">Contact Us</a></li>
             <li><a href="#why">Why LifeWave</a></li>
