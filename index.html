@@ -281,7 +281,7 @@
   </style>
 
   <!-- Security Headers (via meta — GitHub Pages doesn't support HTTP headers) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' sha256-j72mBucE1V+YUaEvzBmPBZOtfEQJomDSVo4B2MTp4qc=; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://player.vimeo.com https://www.bitchute.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' sha256-14ZQ7ZJkmavyKhYPFu6GjQ9Pkqa1TLsCLJudMVQUjuQ=; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://player.vimeo.com https://www.bitchute.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; object-src 'none';">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="deny">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -1028,28 +1028,28 @@
       });
       var waCta = document.getElementById('whatsapp-cta');
       // Hover effect moved to CSS :hover — no JS style manipulation needed
+    }
 
-      // Lazy load iframes (Vimeo + Bitchute) — only load when visible
-      var lazyIframes = document.querySelectorAll('iframe[data-src]');
-      if ('IntersectionObserver' in window) {
-        var iframeObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              var iframe = entry.target;
-              iframe.src = iframe.getAttribute('data-src');
-              iframe.removeAttribute('data-src');
-              iframeObserver.unobserve(iframe);
-            }
-          });
-        }, { rootMargin: '200px' });
-        lazyIframes.forEach(function(iframe) { iframeObserver.observe(iframe); });
-      } else {
-        // Fallback for old browsers
-        lazyIframes.forEach(function(iframe) {
-          iframe.src = iframe.getAttribute('data-src');
-          iframe.removeAttribute('data-src');
+    // Lazy load iframes (Vimeo + Bitchute) — load immediately, not deferred
+    var lazyIframes = document.querySelectorAll('iframe[data-src]');
+    if ('IntersectionObserver' in window) {
+      var iframeObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var iframe = entry.target;
+            iframe.src = iframe.getAttribute('data-src');
+            iframe.removeAttribute('data-src');
+            iframeObserver.unobserve(iframe);
+          }
         });
-      }
+      }, { rootMargin: '200px' });
+      lazyIframes.forEach(function(iframe) { iframeObserver.observe(iframe); });
+    } else {
+      // Fallback for old browsers
+      lazyIframes.forEach(function(iframe) {
+        iframe.src = iframe.getAttribute('data-src');
+        iframe.removeAttribute('data-src');
+      });
     }
     // Use requestIdleCallback if available, fallback to setTimeout
     if ('requestIdleCallback' in window) {
