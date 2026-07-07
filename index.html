@@ -168,7 +168,7 @@
     .videos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
     .video-card{background:var(--white);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}
     .video-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
-    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;contain:strict}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000}
     .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
     .video-card-body{padding:16px}
     .video-card-body h3{font-size:.95rem;margin-bottom:4px}
@@ -281,7 +281,7 @@
   </style>
 
   <!-- Security Headers (via meta — GitHub Pages doesn't support HTTP headers) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' sha256-4OvJJUchzEzv5TWquZh9AHs1ityLQ01glC3kv3onQRE=; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://player.vimeo.com https://www.bitchute.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' sha256-7gwL6a+6sVRQ0ljaZVnpb5u+jNinH7V7xeEci2q3XxQ=; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://player.vimeo.com https://www.bitchute.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; object-src 'none';">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="deny">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -380,7 +380,7 @@
       </div>
       <div style="max-width:800px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.1)">
         <div class="video-wrapper" style="padding-bottom:56.25%">
-          <iframe data-src="https://player.vimeo.com/video/1047652909" allowfullscreen allow="clipboard-write" title="Welcome to LifeWave" loading="lazy"></iframe>
+          <iframe src="https://player.vimeo.com/video/1047652909" allowfullscreen allow="clipboard-write" title="Welcome to LifeWave" loading="lazy"></iframe>
         </div>
       </div>
       <p style="margin-top:16px;font-size:.85rem">LifeWave is a 21-year-old U.S. Health Sciences Research &amp; Development Company that created X39 — a unique, patented form of phototherapy that stimulates the body with low levels of light.</p>
@@ -397,7 +397,7 @@
       </div>
       <div style="max-width:800px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.1)">
         <div class="video-wrapper" style="padding-bottom:56.25%">
-          <iframe data-src="https://player.vimeo.com/video/1116186502" allowfullscreen allow="clipboard-write" title="The Power of the Patch" loading="lazy"></iframe>
+          <iframe src="https://player.vimeo.com/video/1116186502" allowfullscreen allow="clipboard-write" title="The Power of the Patch" loading="lazy"></iframe>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:800px;margin:32px auto 0">
@@ -419,7 +419,7 @@
       </div>
       <div style="max-width:800px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.1)">
         <div class="video-wrapper" style="padding-bottom:56.25%">
-          <iframe data-src="https://player.vimeo.com/video/1098213132" allowfullscreen allow="clipboard-write" title="X39 Science Explained" loading="lazy"></iframe>
+          <iframe src="https://player.vimeo.com/video/1098213132" allowfullscreen allow="clipboard-write" title="X39 Science Explained" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -574,27 +574,27 @@
       </div>
       <div class="videos-grid">
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843990423" allowfullscreen allow="clipboard-write" title="Dr Barbara Jennings, DC Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843990423" allowfullscreen allow="clipboard-write" title="Dr Barbara Jennings, DC Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Barbara Jennings, DC</h3><p>1-minute testimonial</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843990729" allowfullscreen allow="clipboard-write" title="Dr Jeffery Hubbard, MD Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843990729" allowfullscreen allow="clipboard-write" title="Dr Jeffery Hubbard, MD Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Jeffery Hubbard, MD</h3><p>2-minute testimonial</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843990918" allowfullscreen allow="clipboard-write" title="Dr Nicholas Tivoli, DC Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843990918" allowfullscreen allow="clipboard-write" title="Dr Nicholas Tivoli, DC Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Nicholas Tivoli, DC</h3><p>3-minute testimonial</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843994385" allowfullscreen allow="clipboard-write" title="Dr Tom Acklin, MD Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843994385" allowfullscreen allow="clipboard-write" title="Dr Tom Acklin, MD Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Tom Acklin, MD</h3><p>30-second testimonial</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843995759" allowfullscreen allow="clipboard-write" title="Dr Walt Young, AP Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843995759" allowfullscreen allow="clipboard-write" title="Dr Walt Young, AP Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Walt Young, AP</h3><p>2-minute testimonial</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843996504" allowfullscreen allow="clipboard-write" title="Dr Shauna Young, ND Testimonial" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843996504" allowfullscreen allow="clipboard-write" title="Dr Shauna Young, ND Testimonial" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Dr Shauna Young, ND</h3><p>3-minute testimonial</p></div>
         </div>
       </div>
@@ -615,7 +615,7 @@
           <p style="font-size:1.05rem;margin-bottom:16px">Brilliant scientist &amp; researcher. Genius inventor with over 200 patents. On the leading edge of phototherapy research and science for over 24 years.</p>
           <p style="margin-bottom:24px">David has already conducted over 80 clinical studies proving the efficacy of LifeWave phototherapy patches.</p>
           <div style="max-width:400px;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08)">
-            <div class="video-wrapper" style="padding-bottom:56.25%"><iframe data-src="https://player.vimeo.com/video/1132094682" allowfullscreen allow="clipboard-write" title="David Schmidt, CEO — LifeWave Founder" loading="lazy"></iframe></div>
+            <div class="video-wrapper" style="padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/1132094682" allowfullscreen allow="clipboard-write" title="David Schmidt, CEO — LifeWave Founder" loading="lazy"></iframe></div>
           </div>
         </div>
       </div>
@@ -633,11 +633,11 @@
       </div>
       <div class="videos-grid" style="max-width:800px;margin:0 auto">
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843996800" allowfullscreen allow="clipboard-write" title="Athletes Testimonials" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843996800" allowfullscreen allow="clipboard-write" title="Athletes Testimonials" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>Athletes &amp; Performance</h3><p>Recovery, endurance, competitive performance</p></div>
         </div>
         <div class="video-card">
-          <div class="video-wrapper"><iframe data-src="https://player.vimeo.com/video/843996976" allowfullscreen allow="clipboard-write" title="What People Are Saying" loading="lazy"></iframe></div>
+          <div class="video-wrapper"><iframe src="https://player.vimeo.com/video/843996976" allowfullscreen allow="clipboard-write" title="What People Are Saying" loading="lazy"></iframe></div>
           <div class="video-card-body"><h3>What People Are Saying</h3><p>Real people, real results</p></div>
         </div>
       </div>
@@ -673,7 +673,7 @@
         <p style="color:rgba(255,255,255,.7)">Satisfaction of being rewarded for making a difference in people's lives, health &amp; wealth!</p>
       </div>
       <div style="max-width:800px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.3)">
-        <div class="video-wrapper" style="padding-bottom:56.25%"><iframe data-src="https://player.vimeo.com/video/920254548" allowfullscreen allow="clipboard-write" title="Live Younger — Help Others — Get Paid" loading="lazy"></iframe></div>
+        <div class="video-wrapper" style="padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/920254548" allowfullscreen allow="clipboard-write" title="Live Younger — Help Others — Get Paid" loading="lazy"></iframe></div>
       </div>
     </div>
   </section>
@@ -684,10 +684,10 @@
       <div class="x2o-grid">
         <div>
         <div class="x2o-img" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.3);margin-bottom:20px">
-          <iframe data-src="https://www.bitchute.com/embed/PlpbTdLcvlQy/" title="LifeWave X2O Water System" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+          <iframe src="https://www.bitchute.com/embed/PlpbTdLcvlQy/" title="LifeWave X2O Water System" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
         </div>
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.3)">
-          <iframe data-src="https://www.bitchute.com/embed/L1Ebp3h9GciN/" title="LifeWave X2O Water System Demo" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+          <iframe src="https://www.bitchute.com/embed/L1Ebp3h9GciN/" title="LifeWave X2O Water System Demo" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
         </div>
         </div>
         <div>
@@ -1028,28 +1028,6 @@
       });
       var waCta = document.getElementById('whatsapp-cta');
       // Hover effect moved to CSS :hover — no JS style manipulation needed
-    }
-
-    // Lazy load iframes (Vimeo + Bitchute) — load immediately, not deferred
-    var lazyIframes = document.querySelectorAll('iframe[data-src]');
-    if ('IntersectionObserver' in window) {
-      var iframeObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var iframe = entry.target;
-            iframe.src = iframe.getAttribute('data-src');
-            iframe.removeAttribute('data-src');
-            iframeObserver.unobserve(iframe);
-          }
-        });
-      }, { rootMargin: '200px' });
-      lazyIframes.forEach(function(iframe) { iframeObserver.observe(iframe); });
-    } else {
-      // Fallback for old browsers
-      lazyIframes.forEach(function(iframe) {
-        iframe.src = iframe.getAttribute('data-src');
-        iframe.removeAttribute('data-src');
-      });
     }
     // Use requestIdleCallback if available, fallback to setTimeout
     if ('requestIdleCallback' in window) {
