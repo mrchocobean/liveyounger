@@ -3,18 +3,38 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://healthrevolutionsnow.com/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://healthrevolutionsnow.com/images/x39-v3.jpg</image:loc>
+      <image:loc>https://healthrevolutionsnow.com/images/x39-v4.jpg</image:loc>
       <image:title>LifeWave X39 Stem Cell Activation Patch</image:title>
       <image:caption>Patented phototherapy patch that activates stem cells for anti-aging and healing</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://healthrevolutionsnow.com/images/y-age-aeon-v3.jpg</image:loc>
+      <image:loc>https://healthrevolutionsnow.com/images/aeon-v4.jpg</image:loc>
       <image:title>LifeWave Y-Age Aeon Stress Relief Patch</image:title>
       <image:caption>Reduces stress and inflammation with phototherapy technology</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/icewave-v4.jpg</image:loc>
+      <image:title>LifeWave IceWave Pain Relief Patch</image:title>
+      <image:caption>Drug-free pain relief patch using phototherapy technology</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/x49-v4.jpg</image:loc>
+      <image:title>LifeWave X49 Performance Patch</image:title>
+      <image:caption>Supports muscle growth, strength, and vitality with phototherapy</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/glutathione-v4.jpg</image:loc>
+      <image:title>LifeWave Y-Age Glutathione Antioxidant Patch</image:title>
+      <image:caption>Boosts the body's master antioxidant for immune support and detoxification</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/silentnights-v4.jpg</image:loc>
+      <image:title>LifeWave Silent Nights Sleep Patch</image:title>
+      <image:caption>Improves sleep quality without drugs using phototherapy technology</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://healthrevolutionsnow.com/images/growth-3000.png</image:loc>
@@ -29,13 +49,28 @@
   </url>
   <url>
     <loc>https://healthrevolutionsnow.com/sports.html</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://healthrevolutionsnow.com/images/sports/athlete-hero.png</image:loc>
       <image:title>Athlete with LifeWave X39 Phototherapy Patch</image:title>
       <image:caption>Athletes use LifeWave X39 patches for recovery, endurance, and competitive performance</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/sports/man-muscular.png</image:loc>
+      <image:title>Muscular Athlete with LifeWave Patch</image:title>
+      <image:caption>Muscle recovery and performance enhancement with phototherapy patches</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/sports/woman-triangle.png</image:loc>
+      <image:title>Woman in Triangle Pose with LifeWave Patch</image:title>
+      <image:caption>Athletic performance and flexibility support with phototherapy</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://healthrevolutionsnow.com/images/sports/advantage-athletes.png</image:loc>
+      <image:title>LifeWave Advantage for Athletes Diagram</image:title>
+      <image:caption>Science and benefits of LifeWave phototherapy patches for athletes</image:caption>
     </image:image>
   </url>
 </urlset>
