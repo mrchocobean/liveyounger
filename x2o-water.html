@@ -54,6 +54,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdr
 .btn-accent:hover{background:#075985}
 .btn-green{background:var(--accent2);color:#fff}
 .btn-green:hover{background:#047857}
+.availability-note{display:block;font-size:.65rem;font-weight:400;opacity:.8;margin-top:6px;letter-spacing:.02em}
 .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.2)}
 .btn-light:hover{background:rgba(255,255,255,.2)}
 section{padding:64px 0;scroll-margin-top:80px}
@@ -209,7 +210,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
     <h1>Light-Infused™<span>Water</span></h1>
     <p>Meet the first and only water technology system that infuses water with light, making light available to the body in a completely new way.</p>
     <p class="hero-sub">You drink it. You feel it. It works from within.</p>
-    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O</a>
+    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O<span class="availability-note">Available only in the USA</span></a>
     <div class="hero-img">
       <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="hero-img-link">
         <img src="43957.jpg" alt="LifeWave X2O Light-Infused Water System" loading="eager">
@@ -349,8 +350,8 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
           </div>
         </div>
       </div>
-      <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
-      <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+      <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+      <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
     </div>
     <div class="carousel-dots" id="carousel-dots"></div>
   </div>
@@ -412,7 +413,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
   <div class="container">
     <h2>Feel the Difference</h2>
     <p>Experience the first and only water technology system that infuses water with light.</p>
-    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O</a>
+    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O<span class="availability-note">Available only in the USA</span></a>
   </div>
 </section>
 
@@ -452,7 +453,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
       <p>LifeWave X₂O uses a patented process to treat water with selected wavelengths of light: <strong>550 nm, 630 nm, 710 nm</strong>.</p>
       <p>Inside the system, water undergoes a 45-minute processing cycle. During this process, light panels infuse the water with a blend of selected wavelengths of light. Light is a form of electromagnetic activity. Because each water molecule has both a positive and negative side, water can interact with electromagnetic fields, including those created by light...</p>
       <div class="expandable">
-        <button class="expand-btn" onclick="toggleExpand(this)">
+        <button class="expand-btn" data-toggle="expand">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           Read more
         </button>
@@ -525,7 +526,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
   <div class="container">
     <h2>Transform Your Water. Transform Your Body.</h2>
     <p>Experience the power of light-infused water with LifeWave X₂O.</p>
-    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O Now</a>
+    <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener" class="btn btn-green">Get LifeWave X₂O Now<span class="availability-note">Available only in the USA</span></a>
   </div>
 </section>
 
@@ -548,72 +549,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
   <p style="margin-top:16px;font-size:.78rem;color:rgba(255,255,255,.4)">© 2024 LiveYounger. LifeWave X₂O™ and Light-Infused™ are trademarks of LifeWave, Inc. This page is for informational purposes only and is not intended to diagnose, treat, cure, or prevent any disease.</p>
 </footer>
 
-<script>
-// Carousel
-var currentSlide = 0;
-var totalSlides = 5;
-var track = document.getElementById('carousel-track');
-var dotsContainer = document.getElementById('carousel-dots');
-
-// Create dots
-for (var i = 0; i < totalSlides; i++) {
-  (function(idx) {
-    var dot = document.createElement('div');
-    dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
-    dot.onclick = function() { goToSlide(idx); };
-    dotsContainer.appendChild(dot);
-  })(i);
-}
-
-function updateCarousel() {
-  track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-  var dots = dotsContainer.querySelectorAll('.carousel-dot');
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
-  }
-}
-
-function moveSlide(dir) {
-  currentSlide += dir;
-  if (currentSlide >= totalSlides) currentSlide = 0;
-  if (currentSlide < 0) currentSlide = totalSlides - 1;
-  updateCarousel();
-}
-
-function goToSlide(idx) {
-  currentSlide = idx;
-  updateCarousel();
-}
-
-// Auto-advance every 6 seconds
-var autoAdvance = setInterval(function() { moveSlide(1); }, 6000);
-
-// Pause on hover
-var carouselEl = document.getElementById('science-carousel');
-carouselEl.addEventListener('mouseenter', function() { clearInterval(autoAdvance); });
-carouselEl.addEventListener('mouseleave', function() {
-  autoAdvance = setInterval(function() { moveSlide(1); }, 6000);
-});
-
-// Touch/swipe support
-var touchStartX = 0;
-var touchEndX = 0;
-carouselEl.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; });
-carouselEl.addEventListener('touchend', function(e) {
-  touchEndX = e.changedTouches[0].screenX;
-  var diff = touchStartX - touchEndX;
-  if (Math.abs(diff) > 50) {
-    moveSlide(diff > 0 ? 1 : -1);
-  }
-});
-
-// Expandable
-function toggleExpand(btn) {
-  var content = btn.nextElementSibling;
-  content.classList.toggle('open');
-  btn.style.opacity = content.classList.contains('open') ? '.6' : '1';
-}
-</script>
+<script src="x2o-script.js"></script>
 
 </body>
 </html>
