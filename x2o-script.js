@@ -3,15 +3,6 @@ var currentSlide = 0;
 var totalSlides = 5;
 var track = document.getElementById('carousel-track');
 var dotsContainer = document.getElementById('carousel-dots');
-var captionEl = document.getElementById('carousel-caption');
-
-var slideData = [
-  { year: '1672', name: 'Isaac Newton', desc: 'Isaac Newton described light as streams of tiny particles traveling in straight lines, supporting the idea that light behaves like particles.' },
-  { year: '1678', name: 'Christian Huygens', desc: 'Christian Huygens proposed that light travels as waves, helping explain phenomena such as reflection and refraction.' },
-  { year: '1801', name: 'Thomas Young', desc: "Thomas Young's famous double-slit experiment demonstrated that light behaves like a wave, producing interference patterns through constructive and destructive interference." },
-  { year: '1860s', name: 'James Clerk Maxwell', desc: "James Clerk Maxwell unified electricity and magnetism through Maxwell's equations, revealing that light is an electromagnetic wave and part of the electromagnetic spectrum." },
-  { year: '1905', name: 'Albert Einstein', desc: 'Albert Einstein showed that light can also behave as discrete particles, later called photons, helping explain the photoelectric effect.' }
-];
 
 // Create dots
 for (var i = 0; i < totalSlides; i++) {
@@ -29,11 +20,6 @@ function updateCarousel() {
   for (var i = 0; i < dots.length; i++) {
     dots[i].className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
   }
-  // Update caption
-  var data = slideData[currentSlide];
-  captionEl.innerHTML = '<div class="slide-year">' + data.year + '</div>' +
-    '<div class="slide-name">' + data.name + '</div>' +
-    '<div class="slide-desc">' + data.desc + '</div>';
 }
 
 function moveSlide(dir) {
@@ -47,9 +33,6 @@ function goToSlide(idx) {
   currentSlide = idx;
   updateCarousel();
 }
-
-// Initialize caption
-updateCarousel();
 
 // Auto-advance every 6 seconds
 var autoAdvance = setInterval(function() { moveSlide(1); }, 6000);
