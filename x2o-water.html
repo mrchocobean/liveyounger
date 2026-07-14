@@ -141,7 +141,9 @@ section{padding:64px 0;scroll-margin-top:80px}
 .benefits-list li::before{content:'';width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent3));flex-shrink:0;margin-top:8px}
 
 /* Feature comparison */
-.feature-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.feature-compare{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;margin-top:32px;align-items:center}
+.feature-col-img{max-width:280px;display:flex;align-items:center;justify-content:center}
+.feature-col-img img{border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.12)}
 .feature-col{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06)}
 .feature-col.x2o{border:2px solid var(--accent)}
 .feature-col.trad{border:2px solid #e11d48}
@@ -182,6 +184,7 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
 
 @media(max-width:768px){
   .content-grid,.feature-compare{grid-template-columns:1fr;gap:32px}
+  .feature-col-img{max-width:400px;margin:0 auto}
   section{padding:48px 0}
   .carousel{max-width:100%}
 }
@@ -479,11 +482,6 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
     <div class="content-text" style="max-width:800px;margin:24px auto 0">
       <h2>What Makes LifeWave X₂O Different</h2>
     </div>
-    <div class="full-img-wrap" style="margin-top:24px">
-      <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener">
-        <img src="43969.jpg" alt="Traditional Water System vs LifeWave X2O" class="full-img clickable" loading="lazy">
-      </a>
-    </div>
     <div class="feature-compare">
       <div class="feature-col x2o">
         <div class="feature-col-head">LifeWave X₂O</div>
@@ -494,6 +492,11 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
         <div class="feature-item"><div class="feat-label">Smart Monitoring</div><div class="feat-value">Tracks system performance and maintenance needs.</div></div>
         <div class="feature-item"><div class="feat-label">Design & Durability</div><div class="feat-value">Stainless steel, certified polymers, elegant touchscreen display.</div></div>
         <div class="feature-item"><div class="feat-label">Purpose-Driven Water</div><div class="feat-value">Designed to support vitality, energy, and the body's natural renewal.</div></div>
+      </div>
+      <div class="feature-col-img">
+        <a href="https://lifewave.com/revolutionisnow/store/product/LW-X2O-WM-USA" target="_blank" rel="noopener">
+          <img src="43969.jpg" alt="Traditional Water System vs LifeWave X2O" class="full-img clickable" loading="lazy">
+        </a>
       </div>
       <div class="feature-col trad">
         <div class="feature-col-head">Traditional Water Systems</div>
