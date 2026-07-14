@@ -113,19 +113,19 @@ section{padding:64px 0;scroll-margin-top:80px}
 .carousel-section .section-header p{color:rgba(255,255,255,.8)}
 .carousel{position:relative;max-width:600px;margin:0 auto;overflow:hidden;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.3)}
 .carousel-track{display:flex;transition:transform .5s ease-in-out}
-.carousel-slide{min-width:100%;display:flex;align-items:center;justify-content:center}
+.carousel-slide{min-width:100%;display:flex;align-items:center;justify-content:center;position:relative}
 .carousel-slide img{width:100%;height:auto;display:block;cursor:pointer}
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.carousel-btn{position:absolute;top:40%;transform:translateY(-50%);background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
 .carousel-btn:hover{background:rgba(255,255,255,.4)}
 .carousel-btn.prev{left:12px}
 .carousel-btn.next{right:12px}
-.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:20px}
-.carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:background .2s}
-.carousel-dot.active{background:#38bdf8}
-.carousel-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:20px 24px 16px}
-.carousel-caption .slide-year{font-size:.78rem;color:#38bdf8;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-.carousel-caption .slide-name{color:#fff;font-weight:600;font-size:1rem;margin-bottom:4px}
-.carousel-caption .slide-desc{color:rgba(255,255,255,.85);font-size:.85rem}
+.carousel-dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.carousel-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:background .2s,transform .2s}
+.carousel-dot.active{background:#38bdf8;transform:scale(1.3)}
+.carousel-caption{text-align:center;padding:20px 24px 0;min-height:120px}
+.carousel-caption .slide-year{font-size:.78rem;color:#38bdf8;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.carousel-caption .slide-name{color:#fff;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.carousel-caption .slide-desc{color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.6;max-width:500px;margin:0 auto}
 
 /* Expandable section */
 .expandable{margin-top:16px}
@@ -311,47 +311,27 @@ footer .logo{color:#fff;margin-bottom:12px;display:inline-block}
       <div class="carousel-track" id="carousel-track">
         <div class="carousel-slide">
           <img src="43961.jpg" alt="1672 Isaac Newton">
-          <div class="carousel-caption">
-            <div class="slide-year">1672</div>
-            <div class="slide-name">Isaac Newton</div>
-            <div class="slide-desc">Isaac Newton described light as streams of tiny particles traveling in straight lines, supporting the idea that light behaves like particles.</div>
-          </div>
         </div>
         <div class="carousel-slide">
           <img src="43962.jpg" alt="1678 Christian Huygens">
-          <div class="carousel-caption">
-            <div class="slide-year">1678</div>
-            <div class="slide-name">Christian Huygens</div>
-            <div class="slide-desc">Christian Huygens proposed that light travels as waves, helping explain phenomena such as reflection and refraction.</div>
-          </div>
         </div>
         <div class="carousel-slide">
           <img src="43963.jpg" alt="1801 Thomas Young">
-          <div class="carousel-caption">
-            <div class="slide-year">1801</div>
-            <div class="slide-name">Thomas Young</div>
-            <div class="slide-desc">Thomas Young's famous double-slit experiment demonstrated that light behaves like a wave, producing interference patterns through constructive and destructive interference.</div>
-          </div>
         </div>
         <div class="carousel-slide">
           <img src="43964.jpg" alt="1860s James Clerk Maxwell">
-          <div class="carousel-caption">
-            <div class="slide-year">1860s</div>
-            <div class="slide-name">James Clerk Maxwell</div>
-            <div class="slide-desc">James Clerk Maxwell unified electricity and magnetism through Maxwell's equations, revealing that light is an electromagnetic wave and part of the electromagnetic spectrum.</div>
-          </div>
         </div>
         <div class="carousel-slide">
           <img src="43965.jpg" alt="1905 Albert Einstein">
-          <div class="carousel-caption">
-            <div class="slide-year">1905</div>
-            <div class="slide-name">Albert Einstein</div>
-            <div class="slide-desc">Albert Einstein showed that light can also behave as discrete particles, later called photons, helping explain the photoelectric effect.</div>
-          </div>
         </div>
       </div>
       <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
       <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+    </div>
+    <div class="carousel-caption" id="carousel-caption">
+      <div class="slide-year">1672</div>
+      <div class="slide-name">Isaac Newton</div>
+      <div class="slide-desc">Isaac Newton described light as streams of tiny particles traveling in straight lines, supporting the idea that light behaves like particles.</div>
     </div>
     <div class="carousel-dots" id="carousel-dots"></div>
   </div>
