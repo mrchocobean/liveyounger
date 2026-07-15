@@ -62,6 +62,24 @@ var nextBtn = document.querySelector('.carousel-btn.next');
 if (prevBtn) prevBtn.addEventListener('click', function() { moveSlide(-1); });
 if (nextBtn) nextBtn.addEventListener('click', function() { moveSlide(1); });
 
+// Vimeo video facade - load real iframe on click
+var vimeoFacade = document.getElementById('vimeo-facade');
+if (vimeoFacade) {
+  vimeoFacade.addEventListener('click', function() {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://player.vimeo.com/video/1017643167';
+    iframe.title = 'LifeWave X2O Light-Infused Water';
+    iframe.loading = 'lazy';
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
+    vimeoFacade.innerHTML = '';
+    vimeoFacade.style.cursor = 'default';
+    vimeoFacade.style.background = 'transparent';
+    vimeoFacade.appendChild(iframe);
+  });
+}
+
 // Expandable "Read more"
 function toggleExpand(btn) {
   var content = btn.nextElementSibling;
