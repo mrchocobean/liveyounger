@@ -47,14 +47,14 @@ carouselEl.addEventListener('mouseleave', function() {
 // Touch/swipe support
 var touchStartX = 0;
 var touchEndX = 0;
-carouselEl.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; });
+carouselEl.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, {passive:true});
 carouselEl.addEventListener('touchend', function(e) {
   touchEndX = e.changedTouches[0].screenX;
   var diff = touchStartX - touchEndX;
   if (Math.abs(diff) > 50) {
     moveSlide(diff > 0 ? 1 : -1);
   }
-});
+}, {passive:true});
 
 // Arrow buttons
 var prevBtn = document.querySelector('.carousel-btn.prev');
