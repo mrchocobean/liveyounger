@@ -3,7 +3,7 @@
 **Your Website:** https://healthrevolutionsnow.com/x2o-water.html  
 **Brand:** LiveYounger / Health Revolutions Now  
 **Study Referenced:** Connor CA, Connor MH, Eickhoff J, Perry M, Shipione H (2025). Investigation into the Physiological Effects of Nanometer Light Energized Water Study 3: Meridian and Acupuncture Data. HSOA J Altern Complement Integr Med 11: 573.  
-**Download link for readers:** https://healthrevolutionsnow.com/X2OClinicalStudy.pdf  
+**Download page for readers:** https://healthrevolutionsnow.com/x2o-water.html#clinical-study  
 **Goal:** 5 unique articles, each for a different platform, all linking to your X2O water page
 
 ---
@@ -105,7 +105,7 @@ The study's conclusion states: *"All of the test measures, except the Doppler La
 
 While the authors note that a larger sample is needed to confirm conclusions, and a longer test period is recommended, the breadth of significant findings across multiple diagnostic tools is noteworthy.
 
-If you're interested in learning more about the LifeWave X2O system and how light-infused water works, you can [explore the full X2O water system here](https://healthrevolutionsnow.com/x2o-water.html). You can also [download the complete clinical study PDF](https://healthrevolutionsnow.com/X2OClinicalStudy.pdf) to read the full data yourself.
+If you're interested in learning more about the LifeWave X2O system and how light-infused water works, [visit the X2O water page here](https://healthrevolutionsnow.com/x2o-water.html) — where you can also download the complete clinical study PDF to read the full data yourself.
 
 ---
 
@@ -204,7 +204,7 @@ The authors recommend larger sample sizes and longer test periods for future res
 
 The full clinical study is available as a free PDF download. I encourage you to read it and draw your own conclusions.
 
-→ [Download the complete clinical study (PDF)](https://healthrevolutionsnow.com/X2OClinicalStudy.pdf)
+→ [Download the complete clinical study (PDF) from the X2O water page](https://healthrevolutionsnow.com/x2o-water.html#clinical-study)
 
 → [Learn more about the LifeWave X2O light-infused water system](https://healthrevolutionsnow.com/x2o-water.html)
 
@@ -309,7 +309,7 @@ The study authors are appropriately cautious. They recommend larger sample sizes
 2. **Convergent evidence**: Two independent measurement technologies agreed on key organ systems
 3. **Strong p-values**: The nervous system at p = 0.003 and pineal gland at p = 0.010 are not borderline results
 
-If you want to read the complete study yourself — all 17 pages of tables, statistics, and discussion — [you can download the full PDF here](https://healthrevolutionsnow.com/X2OClinicalStudy.pdf).
+If you want to read the complete study yourself — all 17 pages of tables, statistics, and discussion — [visit the X2O water page to download the full PDF](https://healthrevolutionsnow.com/x2o-water.html#clinical-study).
 
 And if you want to learn more about the [LifeWave X2O system that makes light-infused water](https://healthrevolutionsnow.com/x2o-water.html), the full product page explains the technology, filtration, and hydrogen enrichment stages.
 
@@ -379,7 +379,7 @@ The study tested both a group that took the water with supplements (Sulforaphane
 
 The authors recommend larger sample sizes and longer test periods for future research. But within the study's scope, the breadth and consistency of significant findings across multiple diagnostic tools is notable.
 
-You can [download the full clinical study PDF](https://healthrevolutionsnow.com/X2OClinicalStudy.pdf) and read all the data yourself. And if you're interested in the [LifeWave X2O system that produces this light-infused water](https://healthrevolutionsnow.com/x2o-water.html), there's a full page explaining the technology.
+[Visit the X2O water page to download the full clinical study PDF](https://healthrevolutionsnow.com/x2o-water.html#clinical-study) and read all the data yourself. And if you're interested in the [LifeWave X2O system that produces this light-infused water](https://healthrevolutionsnow.com/x2o-water.html), there's a full page explaining the technology.
 
 ---
 
@@ -488,7 +488,7 @@ Water is the most consumed substance on Earth. It makes up 60% of the human body
 
 This isn't about replacing medical treatment. It's about optimizing the most fundamental input to human biology.
 
-The [full clinical study is available as a free PDF download](https://healthrevolutionsnow.com/X2OClinicalStudy.pdf) — I encourage you to read the complete data.
+The [full clinical study is available as a free PDF download on the X2O water page](https://healthrevolutionsnow.com/x2o-water.html#clinical-study) — I encourage you to read the complete data.
 
 For those interested in the [LifeWave X2O system technology](https://healthrevolutionsnow.com/x2o-water.html), the product page covers the light infusion process, filtration stages, and hydrogen enrichment.
 
